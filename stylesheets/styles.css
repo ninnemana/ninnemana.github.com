@@ -2,7 +2,7 @@
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
   color:#777;
   font-weight:300;
 }
@@ -10,6 +10,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
+  text-rendering: optimizeLegibility;
 }
 
 p, ul, ol, table, pre, dl {
@@ -95,11 +96,6 @@ img {
   max-width:100%;
 }
 
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-}
 
 header ul {
   list-style:none;
@@ -160,8 +156,6 @@ header ul a strong {
 }
 
 section {
-  width:500px;
-  float:right;
   padding-bottom:50px;
 }
 
@@ -177,10 +171,61 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
+  width:860px;
   position:fixed;
   bottom:50px;
+}
+
+
+
+/* Ok, customize */
+
+header{
+  width:100%;
+  text-align: center;
+}
+
+.grav_wrapper{
+  width: 300px;
+  margin:auto;
+  margin-bottom: 30px;
+}
+
+.gravatar{
+  margin:auto;
+  margin-top: 100px;
+  background: url('/images/gravatar.png') no-repeat;
+  background-position: 5% 90%;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  padding:8px;
+  opacity: 0.6;
+  -ms-filter: opacity(0.6);
+  -webkit-filter: grayscale(100%);
+  -webkit-filer: blur(3px);
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.gravatar:hover{
+  -webkit-filter: none;
+  -webkit-transform: rotate(360deg);
+}
+
+section{
+  border-top: 1px inset #f1f1f1;
+  margin-top: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.github, .twitter, .email{
+  width: 32%;
+  float:left;
+  text-align: center;
 }
 
 @media print, screen and (max-width: 960px) {
