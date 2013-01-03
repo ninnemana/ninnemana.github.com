@@ -209,10 +209,18 @@ header{
   -webkit-transition: all 0.5s ease-in-out;
 }
 
-.gravatar:hover{
+header:hover .gravatar{
   background-position: 0% 90%;
   -webkit-filter: none;
+}
 
+header h1{
+	color: #ccc;   
+	-webkit-transition:0.3s all ease-in-out;
+}
+
+header:hover h1{
+	color:black;
 }
 
 section{
@@ -223,78 +231,106 @@ section{
 }
 
 .github, .twitter, .email{
-  width: 32%;
-  float:left;
-  text-align: center;
+  min-width: 32%;
+  float: left;
 }
 
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
-    width:auto;
-    margin:0;
+	width:auto;
+	margin:0;
   }
   
   header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
+	float:none;
+	position:static;
+	width:auto;
   }
-  
-  header {
-    padding-right:320px;
-  }
+
   
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+	border-top: 1px solid #E5E5E5;
+	border-width:1px 0;
+	padding:20px 0;
+	margin:0 0 20px;
   }
   
   header a small {
-    display:inline;
+	display:inline;
   }
   
   header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
+	position:absolute;
+	right:50px;
+	top:52px;
   }
 }
 
 @media print, screen and (max-width: 720px) {
   body {
-    word-wrap:break-word;
+	word-wrap:break-word;
   }
   
   header {
-    padding:0;
+	padding:0;
   }
   
   header ul, header p.view {
-    position:static;
+	position:static;
   }
   
   pre, code {
-    word-wrap:normal;
+	word-wrap:normal;
   }
+
+  .github, .twitter, .email{
+	width: auto;
+	float:none;
+	margin-bottom:25px;
+	padding: 10px;
+	-webkit-transition:0.3s all ease-in-out;
+	-moz-transition:0.3s all ease-in-out;
+	-o-transition:0.3s all ease-in-out;
+	-ms-transition:0.3s all ease-in-out;
+	transition:0.3s all ease-in-out;
+
+}
+
+.github h3, .twitter h3, .email h3{
+	font-size:18px;
+	color:#ccc;
+}
+
+.github:hover, .twitter:hover, .email:hover{
+	background: rgb(238,238,238);
+	background: rgba(238,238,238,0.7);
+	-webkit-transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	-o-transform:scale(1.2);
+	-ms-transform:scale(1.2);
+	transform:scale(1.2);
+}
+
+.github:hover h3, .twitter:hover h3, .email:hover h3{
+	color:black;
+}
 }
 
 @media print, screen and (max-width: 480px) {
   body {
-    padding:15px;
+	padding:15px;
   }
   
   header ul {
-    display:none;
+	display:none;
   }
 }
 
 @media print {
   body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
+	padding:0.4in;
+	font-size:12pt;
+	color:#444;
   }
 }
